@@ -1,0 +1,142 @@
+manifest: 'manifest.csv'
+data_dir: '/data/project/dohoon/workbench/data'
+result_dir: '/data/project/dohoon/workbench/result'
+reference:
+    fasta: '/data/project/dohoon/reference/hg38/hg38.fa'
+    index: '/data/project/dohoon/reference/hg38/hg38.fa.fai'
+    name: 'hg38'
+index:
+    prefix: '/data/project/dohoon/reference/hg38/bwa_index/hg38'
+threads:
+    bwa_index: 8
+    bwa_mem: 8
+    sambamba_sort: 8
+    sambamba_index: 8
+    sambamba_markdup: 12
+    strelka2_tumor_normal_se: 8
+    strelka2_tumor_normal_pe: 8
+bwa_result_dir: '02_bwa'
+strelka2_result_dir: '03_strelka2'
+bwa_index:
+    extra: ''
+    a: 'bwtsw'
+    b: False
+    _6: False
+bwa_mem_se:
+    extra: ''
+    k: 19
+    w: 100
+    d: 100
+    r: 1.5
+    y: 20
+    c: 500
+    D: 0.5
+    W: 0
+    m: 50
+    S: False
+    P: False
+    A: 1
+    B: 4
+    O: '6,6'
+    E: '1,1'
+    L: '5,5'
+    U: 17
+    x: False
+    H: False
+    j: False
+    _5: False
+    q: False
+    K: False
+    v: 3
+    T: 30
+    h: '5,200'
+    a: False
+    C: False
+    V: False
+    Y: False
+    M: False
+    I: False
+bwa_mem_pe:
+    extra: ''
+    k: 19
+    w: 100
+    d: 100
+    r: 1.5
+    y: 20
+    c: 500
+    D: 0.5
+    W: 0
+    m: 50
+    S: False
+    P: False
+    A: 1
+    B: 4
+    O: '6,6'
+    E: '1,1'
+    L: '5,5'
+    U: 17
+    x: False
+    H: False
+    j: False
+    _5: False
+    q: False
+    K: False
+    v: 3
+    T: 30
+    h: '5,200'
+    a: False
+    C: False
+    V: False
+    Y: False
+    M: False
+    I: False
+sambamba_sort:
+    extra: ''
+    memory_limit: False
+    tmpdir: False
+    sort_by_name: False
+    compression_level: False
+    uncompressed_chunks: False
+    show_progress: False
+sambamba_markdup:
+    extra: ''
+    remove_duplicates: False
+    compression_level: False
+    show_progress: False
+    tmpdir: False
+    hash_table_size: 262144
+    overflow_list_size: 200000
+    sort_buffer_size: 2048
+    io_buffer_size: 128
+strelka2_tumor_normal_se:
+    extra: ''
+    outputCallableRegions: False
+    indelCandidates: False
+    forcedGT: False
+    exome: False
+    callRegions: False
+    noiseVcf: False
+    scanSizeMb: 12
+    region: False
+    callMemMb: False
+    retainTempFiles: False
+    disableEVS: False
+    reportEVSFeatures: False
+    snvScoringModelFile: False
+    indelScoringModelFile: False
+strelka2_tumor_normal_pe:
+    extra: ''
+    outputCallableRegions: False
+    indelCandidates: False
+    forcedGT: False
+    exome: False
+    callRegions: False
+    noiseVcf: False
+    scanSizeMb: 12
+    region: False
+    callMemMb: False
+    retainTempFiles: False
+    disableEVS: False
+    reportEVSFeatures: False
+    snvScoringModelFile: False
+    indelScoringModelFile: False

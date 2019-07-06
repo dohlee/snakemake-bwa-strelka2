@@ -1,0 +1,11 @@
+name: bwa-strelka2
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - snakemake
+    - bwa
+    - trim-galore
+    - sambamba
+    - snpeff
